@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolful AI | Universal Task-Oriented Tools</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <meta name="description" content="Simple, mechanical AI tools for students and business. Featuring a CV Generator, Code Assistant, and custom tool requests.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Toolful AI",
+      "applicationCategory": "Productivity",
+      "description": "Universal AI hub for students and business productivity.",
+      "creator": { "@type": "Person", "name": "Your Name" }
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">TOOLFUL <span>AI</span></a>
+        </div>
+    </nav>
+
+    <header class="hero container">
+        <h1>Mechanical Simplicity. <br>Human Efficiency.</h1>
+        <p>I build tools that bridge the gap between complex AI and daily tasks. No hype—just useful, predictable tools for everyone.</p>
+    </header>
+
+    <main class="container">
+        <section class="grid">
+            <article class="card">
+                <span class="status">Live</span>
+                <h3>CV Generator</h3>
+                <p>Build an ATS-optimized professional resume in seconds. Mechanical precision for students.</p>
+                <a href="tools/cv.html" class="btn-link">Launch Tool</a>
+            </article>
+
+            <article class="card">
+                <span class="status">Live</span>
+                <h3>Code Generator</h3>
+                <p>Get clean, semantic HTML, CSS, and JS snippets for your GitHub projects instantly.</p>
+                <a href="tools/code.html" class="btn-link">Launch Tool</a>
+            </article>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>What makes this "Mechanical"?</h4>
+                <p>Most AI is conversational and random. Toolful AI is mechanical, meaning it is built to give you the same high-quality, professional result every time you use it.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Who can use Toolful?</h4>
+                <p>Students, business owners, and creators. We prioritize simplicity so you don't need a manual to get work done.</p>
+            </div>
+        </section>
+
+        <section class="request-box" id="request">
+            <h2>Request a Tool</h2>
+            <p>Tell the machine what you need to automate.</p>
+            <form id="toolForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <textarea id="toolDesc" placeholder="Describe the tool you want..." rows="4" required></textarea>
+                <button type="submit" class="main-btn">Send Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 Toolful AI | Built for Machines & Humans</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
