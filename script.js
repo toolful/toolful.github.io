@@ -3,20 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Tools added via JS (NON-CRITICAL for SEO)
     const dynamicTools = [
-        {
-            name: "Code Assistant",
-            description: "Mechanical coding help for students and developers.",
-            link: "code.html",
-            status: "Beta"
+      {
+            name: "Free Qr Code Generator",
+            description: "Free Qr Code For business.",
+            link: "qrcode.html",
+            status: "Live"
         },
-        {
-            name: "Invoice Generator",
-            description: "Create professional invoices in seconds.",
-            link: "invoice.html",
-            status: "Coming Soon"
-        }
-    ];
-
     const toolGrid = document.getElementById("toolGrid");
 
     dynamicTools.forEach(tool => {
