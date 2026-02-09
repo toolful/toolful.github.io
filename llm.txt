@@ -1,0 +1,21 @@
+# Toolful AI
+
+> A universal, task-oriented AI platform for students, businesses, and professionals.
+
+## Purpose
+Toolful AI provides intelligent tools for learning, productivity, writing, and task automation without the need for advanced technical knowledge.
+
+## Key Features
+- AI-powered Writing & Summarization: Simplifies notes and drafts documents.
+- Business Productivity: Support for reports, planning, and email drafting.
+- Educational Assistance: Simplifies complex topics and research.
+- Workflow Automation: Clean, accessible tools for everyday problem-solving.
+
+## Technology Stack
+- Frontend: HTML5, CSS3, JavaScript.
+- Deployment: GitHub Pages.
+
+## Navigation
+- /cv.html: Interactive CV/Professional profile tool.
+- /qrcode.html: QR code generation tool.
+- /index.html: Main platform hub.
