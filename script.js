@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "qrcode.html",
             status: "Live"
         },
+        {
+    name: "CV Generator",
+    description: "AI-powered CV and resume generator for professionals and students.",
+    link: "cv-generator.html",
+    status: "Live"
+},
+{
+    name: "You AI Detector",
+    description: "AI tool to detect AI-generated content with accuracy and speed.",
+    link: "ai-detector.html",
+    status: "Live"
+}
+
     const toolGrid = document.getElementById("toolGrid");
 
     dynamicTools.forEach(tool => {
