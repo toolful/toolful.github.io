@@ -76,4 +76,4 @@ Toolful is built for everyday use, including:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/toolful.git
+git clone https://github.com/toolful/toolful.git
