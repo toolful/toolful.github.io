@@ -1,163 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free CV Maker Online | Build ATS-Optimized Professional Resumes | Toolful</title>
-    <meta name="description" content="Use the best Free CV Builder Online. Create ATS-friendly, professional resumes in seconds. Export to PDF, optimize keywords, and land your dream job.">
-    <meta name="keywords" content="CV Builder, Free CV Maker Online, Free CV Builder Online, ATS Resume Generator, Professional Resume Creator">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://toolful.github.io/">
-    <meta property="og:title" content="Free CV Maker Online - Professional & ATS-Friendly">
-    <meta property="og:description" content="Generate a professional resume for free. ATS-optimized templates, real-time preview, and instant PDF download.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free CV Maker Online | Toolful</title>
+<meta name="description" content="Create professional ATS-friendly resumes online for free. Real-time preview, PDF export, keyword optimization.">
+<meta name="keywords" content="CV Builder, Resume Maker, Free CV, ATS Optimized Resume, Professional Resume Creator">
 
-    <link rel="stylesheet" href="cv.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free CV Maker Online – Toolful">
+<meta property="og:description" content="Build professional ATS-friendly resumes online for free.">
+<meta property="og:url" content="https://toolful.github.io/">
+<meta property="og:image" content="https://toolful.github.io/assets/cv-preview.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free CV Maker Online – Toolful">
+<meta name="twitter:description" content="Build professional ATS-friendly resumes online for free.">
+<meta name="twitter:image" content="https://toolful.github.io/assets/cv-preview.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Toolful CV Builder",
+  "url":"https://toolful.github.io/",
+  "applicationCategory":"Resume Builder",
+  "description":"Free online CV builder with ATS optimization and instant PDF export.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+}
+</script>
+
+<!-- Fonts & CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cv.css">
 </head>
 <body class="light-mode">
-    <header class="app-header">
-        <div class="container nav-wrapper">
-            <div class="logo">
-                <span class="icon">📄</span> <strong>Toolful CV</strong>
-            </div>
-            <nav>
-                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓 Mode</button>
-                <button id="sample-data-btn" class="btn-secondary">Fill Sample</button>
-                <button id="export-pdf" class="btn-primary">Download PDF</button>
-            </nav>
+
+<header class="app-header">
+    <div class="container nav-wrapper">
+        <div class="logo"><span>📄</span> <strong>Toolful CV</strong></div>
+        <nav>
+            <button id="theme-toggle">🌓 Mode</button>
+            <button id="sample-data-btn">Fill Sample</button>
+            <button id="export-pdf">Download PDF</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container app-grid">
+    <!-- Editor Pane -->
+    <section class="editor-pane">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="content">Content</button>
+            <button class="tab-btn" data-tab="optimize">ATS Optimizer</button>
+            <button class="tab-btn" data-tab="design">Design</button>
         </div>
-    </header>
 
-    <main class="container app-grid">
-        <section class="editor-pane">
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="content">Content</button>
-                <button class="tab-btn" data-tab="optimize">ATS Optimizer</button>
-                <button class="tab-btn" data-tab="design">Design</button>
+        <!-- Content Tab -->
+        <div id="content-tab" class="tab-content active">
+            <div class="progress-container">
+                <label>Profile Completion</label>
+                <div class="progress-bar"><div id="profile-progress" style="width:20%;"></div></div>
             </div>
-
-            <div id="content-tab" class="tab-content active">
-                <div class="progress-container">
-                    <label>Profile Completion</label>
-                    <div class="progress-bar"><div id="profile-progress" style="width: 20%;"></div></div>
-                </div>
-
-                <form id="cv-form">
-                    <details open>
-                        <summary>Personal Information</summary>
-                        <div class="form-group">
-                            <input type="text" name="fullName" placeholder="Full Name" aria-label="Full Name">
-                            <input type="text" name="jobTitle" placeholder="Professional Title (e.g. Senior Developer)" aria-label="Job Title">
-                            <input type="email" name="email" placeholder="Email Address">
-                            <input type="tel" name="phone" placeholder="Phone Number">
-                            <input type="text" name="location" placeholder="City, Country">
-                            <input type="url" name="website" placeholder="Portfolio/LinkedIn URL">
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Professional Summary</summary>
-                        <textarea name="summary" placeholder="Briefly describe your career goals and key achievements..." maxlength="500"></textarea>
-                        <small class="char-count">0/500</small>
-                    </details>
-
-                    <details>
-                        <summary>Work Experience</summary>
-                        <div id="experience-list"></div>
-                        <button type="button" class="add-btn" onclick="addItem('experience')">+ Add Experience</button>
-                    </details>
-
-                    <details>
-                        <summary>Education</summary>
-                        <div id="education-list"></div>
-                        <button type="button" class="add-btn" onclick="addItem('education')">+ Add Education</button>
-                    </details>
-
-                    <details>
-                        <summary>Skills & Keywords</summary>
-                        <div id="skills-list"></div>
-                        <button type="button" class="add-btn" onclick="addItem('skills')">+ Add Skill</button>
-                    </details>
-                </form>
-            </div>
-
-            <div id="optimize-tab" class="tab-content">
-                <div class="ats-checker">
-                    <h3>ATS Keyword Matcher</h3>
-                    <textarea id="job-description" placeholder="Paste the job description here to check for keyword density..."></textarea>
-                    <div id="ats-results">
-                        <div class="score-circle">0%</div>
-                        <p id="ats-feedback">Enter a job description to analyze.</p>
+            <form id="cv-form">
+                <details open>
+                    <summary>Personal Information</summary>
+                    <div class="form-group">
+                        <input type="text" name="fullName" placeholder="Full Name">
+                        <input type="text" name="jobTitle" placeholder="Professional Title">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="tel" name="phone" placeholder="Phone">
+                        <input type="text" name="location" placeholder="Location">
+                        <input type="url" name="website" placeholder="Portfolio / LinkedIn">
                     </div>
-                </div>
-            </div>
+                </details>
 
-            <div id="design-tab" class="tab-content">
-                <h3>Template Customization</h3>
-                <div class="control-group">
-                    <label>Font Family</label>
-                    <select id="font-select">
-                        <option value="'Inter', sans-serif">Modern Sans (Inter)</option>
-                        <option value="'Merriweather', serif">Classic Serif (Merriweather)</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label>Color Theme</label>
-                    <input type="color" id="accent-color" value="#2563eb">
-                </div>
-            </div>
-        </section>
+                <details>
+                    <summary>Professional Summary</summary>
+                    <textarea name="summary" placeholder="Briefly describe your career goals..." maxlength="500"></textarea>
+                    <small class="char-count">0/500</small>
+                </details>
 
-        <section class="preview-pane">
-            <div id="resume-preview" class="resume-paper">
-                <header class="preview-header">
-                    <h1 id="p-name">Your Name</h1>
-                    <p id="p-title">Professional Title</p>
-                    <div class="contact-info">
-                        <span id="p-email"></span>
-                        <span id="p-phone"></span>
-                        <span id="p-location"></span>
-                    </div>
-                </header>
-                <div class="preview-body">
-                    <section class="p-section">
-                        <h2>Professional Summary</h2>
-                        <p id="p-summary"></p>
-                    </section>
-                    <section class="p-section" id="p-experience-sec">
-                        <h2>Experience</h2>
-                        <div id="p-experience"></div>
-                    </section>
-                    <section class="p-section" id="p-education-sec">
-                        <h2>Education</h2>
-                        <div id="p-education"></div>
-                    </section>
-                    <section class="p-section" id="p-skills-sec">
-                        <h2>Skills</h2>
-                        <div id="p-skills" class="skills-grid"></div>
-                    </section>
-                </div>
-            </div>
-        </section>
-    </main>
+                <details>
+                    <summary>Work Experience</summary>
+                    <div id="experience-list"></div>
+                    <button type="button" class="add-btn" onclick="addItem('experience')">+ Add Experience</button>
+                </details>
 
-    <footer class="footer-seo container">
-        <hr>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>Is this CV Builder free?</h3>
-            <p>Yes, Toolful provides a 100% free CV maker online with no hidden costs or watermarks.</p>
+                <details>
+                    <summary>Education</summary>
+                    <div id="education-list"></div>
+                    <button type="button" class="add-btn" onclick="addItem('education')">+ Add Education</button>
+                </details>
+
+                <details>
+                    <summary>Skills & Keywords</summary>
+                    <div id="skills-list"></div>
+                    <button type="button" class="add-btn" onclick="addItem('skills')">+ Add Skill</button>
+                </details>
+            </form>
         </div>
-        <div class="faq-item">
-            <h3>Are the resumes ATS-friendly?</h3>
-            <p>Absolutely. Our templates avoid tables and images that confuse ATS software, ensuring your resume passes screening filters.</p>
+
+        <!-- ATS Optimizer Tab -->
+        <div id="optimize-tab" class="tab-content">
+            <h3>ATS Keyword Matcher</h3>
+            <textarea id="job-description" placeholder="Paste job description to analyze keywords"></textarea>
+            <div id="ats-results">
+                <div class="score-circle">0%</div>
+                <p id="ats-feedback">Enter a job description to analyze.</p>
+            </div>
         </div>
-    </footer>
 
-    <div id="toast" class="hidden"></div>
+        <!-- Design Tab -->
+        <div id="design-tab" class="tab-content">
+            <h3>Template Customization</h3>
+            <label>Font Family:</label>
+            <select id="font-select">
+                <option value="'Inter', sans-serif">Modern Sans (Inter)</option>
+                <option value="'Merriweather', serif">Classic Serif (Merriweather)</option>
+            </select>
+            <label>Primary Color:</label>
+            <input type="color" id="accent-color" value="#2563eb">
+        </div>
+    </section>
 
-    <script src="cv.js"></script>
+    <!-- Preview Pane -->
+    <section class="preview-pane">
+        <div id="resume-preview" class="resume-paper">
+            <header class="preview-header">
+                <h1 id="p-name">Your Name</h1>
+                <p id="p-title">Professional Title</p>
+                <div class="contact-info">
+                    <span id="p-email"></span>
+                    <span id="p-phone"></span>
+                    <span id="p-location"></span>
+                </div>
+            </header>
+            <div class="preview-body">
+                <section class="p-section">
+                    <h2>Professional Summary</h2>
+                    <p id="p-summary"></p>
+                </section>
+                <section class="p-section">
+                    <h2>Experience</h2>
+                    <div id="p-experience"></div>
+                </section>
+                <section class="p-section">
+                    <h2>Education</h2>
+                    <div id="p-education"></div>
+                </section>
+                <section class="p-section">
+                    <h2>Skills</h2>
+                    <div id="p-skills" class="skills-grid"></div>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-seo container">
+    <hr>
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <h3>Is this CV Builder free?</h3>
+        <p>Yes, 100% free with no watermarks.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Are resumes ATS-friendly?</h3>
+        <p>Yes, all templates pass ATS software screening.</p>
+    </div>
+</footer>
+
+<script src="cv.js"></script>
 </body>
 </html>
