@@ -1,0 +1,99 @@
+    :root {
+            --brand: #2563eb;
+            --brand-dark: #1d4ed8;
+            --surface: #ffffff;
+            --bg: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background: var(--bg); color: var(--text-main); line-height: 1.6; }
+        .wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* HERO AREA */
+        .hero { text-align: center; padding: 60px 20px; }
+        .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 15px; color: var(--text-main); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        /* UPLOAD ZONE */
+        .upload-card {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 2px dashed #cbd5e1;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .upload-card:hover { border-color: var(--brand); background: #f8fafc; }
+        .upload-card svg { width: 50px; height: 50px; fill: var(--brand); margin-bottom: 15px; }
+        #file-input { display: none; }
+
+        /* TOOLBAR */
+        .toolbar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 30px 0;
+        }
+        .btn {
+            padding: 14px 10px;
+            border: none;
+            border-radius: 8px;
+            background: var(--brand);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        .btn:hover { background: var(--brand-dark); transform: translateY(-2px); }
+        .btn:disabled { background: #94a3b8; cursor: not-allowed; transform: none; }
+
+        /* OUTPUT PANEL */
+        .output-panel { 
+            background: var(--surface); 
+            border-radius: var(--radius); 
+            padding: 25px; 
+            margin-top: 20px;
+            display: none; 
+            box-shadow: var(--shadow);
+        }
+        #preview-box { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+            gap: 15px; 
+            margin-bottom: 20px; 
+        }
+        .img-thumb { width: 100%; height: 100px; object-fit: cover; border-radius: 6px; border: 1px solid #e2e8f0; }
+        
+        #ocr-text-area {
+            width: 100%;
+            height: 250px;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            background: #f8fafc;
+        }
+
+        /* SEO CONTENT SECTIONS */
+        .seo-content { margin-top: 80px; }
+        .seo-content h2 { margin-bottom: 20px; }
+        .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .faq-section { margin-top: 60px; background: #fff; padding: 30px; border-radius: 12px; }
+        .faq-item { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .seo-grid { grid-template-columns: 1fr; }
+            .toolbar { grid-template-columns: 1fr 1fr; }
+        }

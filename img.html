@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Image to PDF, Text, JPG & Word Converter | Free Online Web Tool</title>
+    <meta name="description" content="Free browser-based tool to convert Image to PDF, Image to Text (OCR), JPG, PNG, and Word. No login, no watermarks. Convert images to editable text instantly.">
+    <meta name="keywords" content="Image to JPG, Image to PDF, Image to Text, Image to PNG, Image to Word, Image to Editable, Image to PDF converter free download, Image to text copy, Free images, Images download, Image Peshawar">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+	<link rel="stylesheet" href="img.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How to use the Image to PDF converter free download tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply upload your images, select 'Image to PDF', and click download. Our tool works 100% in your browser for fast, private processing."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is there a limit on Image to Text copy conversions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, this tool provides unlimited Image to Editable text conversions using advanced OCR technology for free."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="hero">
+        <h1>Ultimate Image Conversion Suite</h1>
+        <p>Professional grade <strong>Image to PDF</strong>, <strong>Image to Text</strong>, and <strong>Image to JPG</strong> tools. All processing happens on your device—secure, fast, and free.</p>
+    </header>
+
+    <div class="upload-card" id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+        <h3>Drag & Drop Images Photos</h3>
+        <p>Supports JPG, PNG, WebP & Beautiful images photos</p>
+        <input type="file" id="file-input" multiple accept="image/*">
+    </div>
+
+    <nav class="toolbar">
+        <button class="btn" onclick="convert('jpg')">To JPG</button>
+        <button class="btn" onclick="convert('png')">To PNG</button>
+        <button class="btn" onclick="convert('pdf')">To PDF</button>
+        <button class="btn" onclick="convert('ocr')">To Text (OCR)</button>
+        <button class="btn" onclick="convert('docx')">To Word</button>
+    </nav>
+
+    <div id="status-bar" style="text-align: center; font-weight: bold; margin-bottom: 10px;"></div>
+    
+    <section class="output-panel" id="main-output">
+        <div id="preview-box"></div>
+        
+        <div id="ocr-container" style="display:none;">
+            <textarea id="ocr-text-area" placeholder="Your extracted Image to Editable text will appear here..."></textarea>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn" onclick="copyText()" style="background:#10b981">Image to text copy</button>
+                <button class="btn" onclick="downloadTxt()" style="background:#64748b">Save as TXT</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-content">
+        <div class="seo-grid">
+            <div>
+                <h2>High-Quality Image to Word & PDF</h2>
+                <p>Our <strong>Image to PDF converter free download</strong> service allows you to combine multiple <strong>images photos</strong> into a single document. Whether you are in <strong>Peshawar</strong> or London, our tool ensures your <strong>Image Brand</strong> stays consistent with high-resolution outputs.</p>
+                <p>We support all <strong>free images</strong> types. If you found <strong>images clothing pk</strong> or <strong>images photos girl</strong> online and need to extract product codes, our OCR is the perfect solution.</p>
+            </div>
+            <div>
+                <h2>Why Use Our Image to Text Tool?</h2>
+                <p>Unlike other sites, we offer <strong>Image to text copy</strong> with zero registration. Extract <strong>Image to Editable</strong> content from screenshots or scans instantly. Use the <strong>image search</strong> friendly interface to manage your <strong>images download</strong> workflow faster than ever.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 id="faq">Common Questions (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Is this Image to JPG converter safe?</h3>
+                <p>Yes. Your files are processed locally. No <strong>images photos</strong> are sent to our servers. Your privacy is our priority.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does it support bulk conversion?</h3>
+                <p>Absolutely. You can select multiple <strong>beautiful images photos</strong> and convert them to <strong>Image to PDF</strong> or JPG in one go.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I convert images photos of clothing pk items to Word?</h3>
+                <p>Yes, use the 'To Word' feature to turn any <strong>images clothing</strong> labels or descriptions into a .docx file.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 50px; text-align: center; color: var(--text-muted); padding: 20px; border-top: 1px solid #e2e8f0;">
+        <p>&copy; 2026 WebTool Suite. All-in-one <strong>Images download</strong> & conversion service.</p>
+    </footer>
+</div>
+<script src="img.js"></script>
+</body>
+</html>
