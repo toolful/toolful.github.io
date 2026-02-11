@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2048 x 1152 YouTube Banner Maker Free | 6MB Converter Tool</title>
+  <meta name="description" content="Free 2048 x 1152 pixels YouTube banner maker. Resize and convert images to 2048x1152 pixels and 6MB or less. Works on all devices. No upload required.">
+  <meta name="keywords" content="2048 x 1152 YouTube banner, YouTube banner size converter, 2048x1152 pixels converter">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="youtube.css">
+</head>
+
+<body>
+
+<header>
+  <h1>2048 x 1152 YouTube Banner Maker Free</h1>
+  <p>Resize images to 2048 x 1152 pixels and 6MB or less</p>
+</header>
+
+<div class="container">
+
+  <!-- ================= BANNER TOOL ================= -->
+  <section class="tool-box">
+    <h2>YouTube Banner Maker</h2>
+
+    <div class="drop-zone" id="dropZone">
+      Drag & Drop Image Here or Click Below
+    </div>
+
+    <input type="file" id="upload" accept="image/*">
+
+    <select id="format">
+      <option value="image/jpeg">JPG</option>
+      <option value="image/png">PNG</option>
+      <option value="image/webp">WEBP</option>
+    </select>
+
+    <button id="convertBanner">Convert to 2048x1152</button>
+
+    <canvas id="canvas"></canvas>
+
+    <p id="fileSize"></p>
+
+    <a id="downloadLink" style="display:none;" download="2048x1152-youtube-banner.jpg">
+      <button>Download YouTube Banner</button>
+    </a>
+  </section>
+
+  <!-- ================= PROFILE TOOL ================= -->
+  <section class="tool-box">
+    <h2>98 x 98 YouTube Profile Picture Maker</h2>
+    <p>Recommended: 98 x 98 pixels and under 4MB</p>
+
+    <div class="drop-zone" id="profileDrop">
+      Drag & Drop Profile Image Here
+    </div>
+
+    <input type="file" id="profileUpload" accept="image/*">
+
+    <select id="profileFormat">
+      <option value="image/png">PNG</option>
+      <option value="image/jpeg">JPG</option>
+    </select>
+
+    <button id="convertProfile">Convert to 98x98</button>
+
+    <canvas id="profileCanvas"></canvas>
+
+    <p id="profileSize"></p>
+
+    <a id="profileDownload" style="display:none;" download="youtube-profile-98x98.png">
+      <button>Download Profile Image</button>
+    </a>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Toolful - Free YouTube Banner & Profile Maker
+</footer>
+
+<script src="youtube.js"></script>
+</body>
+</html>
