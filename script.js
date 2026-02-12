@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
   const popup = document.getElementById("welcomePopup");
   const startBtn = document.getElementById("startBtn");
@@ -10,20 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.style.display = "none";
   }
 
-  startBtn.addEventListener("click", () => {
+  startBtn.addEventListener("click", function () {
+    const name = nameInput.value.trim();
 
-    const userName = nameInput.value.trim();
-
-    if (!userName) {
+    if (!name) {
       alert("Please enter your name.");
       return;
     }
 
-    localStorage.setItem("toolfulUserName", userName);
+    localStorage.setItem("toolfulUserName", name);
     popup.style.display = "none";
-
-    alert("Welcome " + userName + "! 🚀");
-
   });
 
 });
