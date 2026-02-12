@@ -5,211 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TITLE (SEO Optimized) -->
+    <!-- TITLE -->
     <title>Toolful AI – Free AI Tools for Students & Productivity</title>
 
-    <!-- META DESCRIPTION (Only ONE) -->
+    <!-- META DESCRIPTION -->
     <meta name="description"
-        content="Toolful AI offers free AI-powered tools like CV Generator, QR Code Maker, Image Converter, and study productivity tools for students and businesses.">
+        content="Toolful AI offers free AI-powered tools like CV Generator, QR Code Maker, Image Converter, and productivity tools for students and businesses.">
 
-    <!-- SEO META -->
-    <meta name="keywords"
-        content="Toolful AI, free AI tools, resume generator, QR code generator, productivity tools, AI tools for students">
     <meta name="robots" content="index, follow">
-
-    <!-- CANONICAL -->
     <link rel="canonical" href="https://toolful.github.io/">
 
-    <!-- STYLESHEET -->
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- OPEN GRAPH (Facebook + LinkedIn SEO) -->
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Toolful AI – Free AI Tools for Productivity & Learning">
     <meta property="og:description"
-        content="Use free AI tools for writing, resumes, QR codes, image conversion, and productivity. Simple, fast, and accessible.">
+        content="Create resumes, generate QR codes, convert images and boost productivity with free AI tools.">
     <meta property="og:url" content="https://toolful.github.io/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://toolful.github.io/preview.png">
 
-    <!-- TWITTER SEO -->
+    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Toolful AI – Free AI Tools for Students & Business">
+    <meta name="twitter:title" content="Toolful AI – Free AI Tools">
     <meta name="twitter:description"
-        content="Boost productivity with free AI-powered tools like CV Generator, QR Code Maker, and Image Converter.">
+        content="Boost productivity with free AI-powered tools for students and businesses.">
+    <meta name="twitter:image" content="https://toolful.github.io/preview.png">
 
-    <!-- AHRREFS ANALYTICS (Only ONCE) -->
+    <!-- AHREFS -->
     <script src="https://analytics.ahrefs.com/analytics.js"
         data-key="7AoWnpzVvd1oEeK/rpVP/g" async></script>
-
-    <!-- SOFTWARE APP SCHEMA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Toolful AI",
-      "operatingSystem": "Web",
-      "applicationCategory": "ProductivityApplication",
-      "description": "Toolful AI provides free AI tools for students, freelancers, and businesses including resume builders, QR generators, and converters.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Toolful AI",
-        "url": "https://toolful.github.io/"
-      }
-    }
-    </script>
-
-    <!-- FAQ SCHEMA (Google Rich Results Boost) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Toolful AI?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Toolful AI is a free platform offering AI-powered tools for productivity, learning, writing, and automation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who can use Toolful AI tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Students, business owners, freelancers, and creators can use Toolful AI tools for free."
-          }
-        }
-      ]
-    }
-    </script>
 </head>
 
 <body>
-    <div id="welcomePopup" class="popup-overlay">
-  <div class="popup-box">
-    <h2>Welcome to Toolful AI 👋</h2>
-    <p>Enter your name to start using free tools.</p>
 
-    <input type="text" id="userNameInput" placeholder="Your name..." />
-
-    <button id="startBtn">Start Using Tools</button>
-  </div>
+<!-- POPUP -->
+<div id="welcomePopup" class="popup-overlay">
+    <div class="popup-box">
+        <button id="closePopup" class="close-btn">×</button>
+        <h2>Welcome to Toolful AI 👋</h2>
+        <p>Enter your name to start using free tools.</p>
+        <input type="text" id="userNameInput" placeholder="Your name..." />
+        <button id="startBtn">Start Using Tools</button>
+    </div>
 </div>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="logo">TOOLFUL<span>.</span></a>
+    </div>
+</nav>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">TOOLFUL<span>.</span></a>
-        </div>
-    </nav>
+<!-- HERO -->
+<header class="hero container">
+    <h1>Free AI Tools for Students & Productivity</h1>
+    <p>
+        Toolful AI provides free AI-powered productivity tools for students,
+        freelancers, and businesses. Create resumes, generate QR codes,
+        convert images, and boost your workflow instantly.
+    </p>
+</header>
 
-    <!-- HERO -->
-    <header class="hero container">
-        <h1>Free AI Tools for Students & Productivity</h1>
-        <p>
-            Toolful AI provides simple and fast tools to help you study, write, automate tasks,
-            and improve daily productivity — without complexity.
-        </p>
-    </header>
+<!-- MAIN -->
+<main class="container">
 
-    <!-- MAIN -->
-    <main class="container">
+    <!-- TOOLS -->
+    <section class="grid">
 
-        <!-- TOOLS GRID -->
-        <section class="grid" id="toolGrid">
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>CV Generator</h3>
+            <p>Create an ATS-friendly professional resume in seconds.</p>
+            <a href="cv.html" class="btn-link">Launch Tool</a>
+        </article>
 
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>CV Generator</h3>
-                <p>Create an ATS-friendly professional resume in seconds.</p>
-                <a href="cv.html" class="btn-link">Launch Tool</a>
-            </article>
-            
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>Wordify</h3>
-                <p>Free Word Counter Tool. Instant word & character counter with reading time</p>
-                <a href="wordify.html" class="btn-link">Launch Tool</a>
-            </article>
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>Wordify</h3>
+            <p>Free word counter with instant character count & reading time.</p>
+            <a href="wordify.html" class="btn-link">Launch Tool</a>
+        </article>
 
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>YouTube Banner Maker</h3>
-                <p>Resize images to perfect YouTube channel art dimensions.</p>
-                <a href="youtube.html" class="btn-link">Launch Tool</a>
-            </article>
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>YouTube Banner Maker</h3>
+            <p>Resize images to perfect YouTube channel art dimensions.</p>
+            <a href="youtube.html" class="btn-link">Launch Tool</a>
+        </article>
 
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>Image Converter</h3>
-                <p>Convert images to PDF, JPG, PNG, text, or editable formats instantly.</p>
-                <a href="img.html" class="btn-link">Launch Tool</a>
-            </article>
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>Image Converter</h3>
+            <p>Convert images to PDF, JPG, PNG or text instantly.</p>
+            <a href="img.html" class="btn-link">Launch Tool</a>
+        </article>
 
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>Free QR Code Generator</h3>
-                <p>Generate clean QR codes for business, events, or personal use.</p>
-                <a href="qrcode.html" class="btn-link">Launch Tool</a>
-            </article>
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>Free QR Code Generator</h3>
+            <p>Generate clean QR codes for business or personal use.</p>
+            <a href="qrcode.html" class="btn-link">Launch Tool</a>
+        </article>
 
-            <article class="card">
-                <span class="status">Live</span>
-                <h3>You – AI Detector</h3>
-                <p>Detect AI-written content and humanize your writing.</p>
-                <a href="you.html" class="btn-link">Launch Tool</a>
-            </article>
+        <article class="card">
+            <span class="status">Live</span>
+            <h3>You – AI Detector</h3>
+            <p>Detect AI-written content and humanize your writing.</p>
+            <a href="you.html" class="btn-link">Launch Tool</a>
+        </article>
 
-        </section>
+    </section>
 
-        <!-- FAQ -->
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
+</main>
 
-            <div class="faq-item">
-                <h4>What makes Toolful AI different?</h4>
-                <p>Toolful focuses on simple, repeatable tools instead of confusing AI chats.</p>
-            </div>
+<footer class="container">
+    <p>&copy; 2026 Toolful AI | Free AI Tools</p>
+</footer>
 
-            <div class="faq-item">
-                <h4>Is Toolful AI free?</h4>
-                <p>Yes, all tools are completely free for students and businesses.</p>
-            </div>
-        </section>
-
-        <!-- REQUEST TOOL -->
-        <section class="request-box" id="request">
-            <h2>Request a Tool</h2>
-            <p>Tell us what you want to automate and we’ll build it.</p>
-
-            <form action="https://formspree.io/f/xojnqwwp" method="POST">
-                <label>Name</label>
-                <input type="text" name="name" placeholder="Your name" required>
-
-                <label>Tool Description</label>
-                <textarea name="message" rows="4"
-                    placeholder="Describe the tool you need..." required></textarea>
-
-                <button type="submit" class="main-btn">
-                    Send Request
-                </button>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="container">
-        <p>&copy; 2026 Toolful AI | Free AI Tools for Everyone</p>
-    </footer>
-
-    <!-- JS -->
-    <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
