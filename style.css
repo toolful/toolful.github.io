@@ -47,15 +47,14 @@ body {
 .logo-icon {
   background: var(--accent);
   color: white;
-  font-weight: bold;
   padding: 10px 15px;
   border-radius: 10px;
+  font-weight: bold;
 }
 
 .logo-text {
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--primary);
 }
 
 .logo-text span {
@@ -69,10 +68,6 @@ body {
   font-size: 0.9rem;
 }
 
-.nav a:hover {
-  color: var(--accent);
-}
-
 /* HERO */
 .hero {
   text-align: center;
@@ -80,18 +75,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  color: var(--primary);
-}
-
-.hero h2 {
-  margin-top: 10px;
-  color: var(--accent);
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 20px auto;
+  font-size: 2.5rem;
 }
 
 /* GRID */
@@ -106,13 +90,7 @@ body {
   padding: 30px;
   border-radius: 15px;
   border: 1px solid #e2e8f0;
-  transition: 0.3s;
   position: relative;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
 }
 
 .status {
@@ -135,42 +113,75 @@ body {
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 0.9rem;
 }
 
-/* FAQ */
-.faq {
+/* FORM */
+.form-section {
   margin-top: 80px;
-}
-
-.faq h2 {
-  margin-bottom: 20px;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
-}
-
-.footer {
   text-align: center;
-  padding: 40px 0;
+}
+
+.form-section form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  background: var(--accent);
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* POPUP */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.popup-box button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav {
     margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .nav a {
-    margin: 5px 10px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
   }
 }
