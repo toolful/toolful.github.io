@@ -1,21 +1,18 @@
-# Toolful AI
+Toolful AI (https://toolful.github.io/) is a free web platform offering browser-based AI productivity tools.
 
-> A universal, task-oriented AI platform for students, businesses, and professionals.
+Main tools:
 
-## Purpose
-Toolful AI provides intelligent tools for learning, productivity, writing, and task automation without the need for advanced technical knowledge.
+Wordify (https://toolful.github.io/wordify.html) – AI writing assistant for rewriting, paraphrasing, and humanizing text.
 
-## Key Features
-- AI-powered Writing & Summarization: Simplifies notes and drafts documents.
-- Business Productivity: Support for reports, planning, and email drafting.
-- Educational Assistance: Simplifies complex topics and research.
-- Workflow Automation: Clean, accessible tools for everyday problem-solving.
+CV Generator (https://toolful.github.io/cv.html) – Creates ATS-friendly resumes for students and professionals.
 
-## Technology Stack
-- Frontend: HTML5, CSS3, JavaScript.
-- Deployment: GitHub Pages.
+QR Code Generator (https://toolful.github.io/qrcode.html) – Generates clean QR codes for business and personal use.
 
-## Navigation
-- /cv.html: Interactive CV/Professional profile tool.
-- /qrcode.html: QR code generation tool.
-- /index.html: Main platform hub.
+Image Converter (https://toolful.github.io/img.html) – Converts images to PDF, JPG, PNG, and text formats.
+
+YouTube Banner Maker (https://toolful.github.io/youtube.html) – Resizes images for YouTube channel art.
+
+You AI Detector (https://toolful.github.io/you.html) – Detects AI-generated text and improves human tone.
+
+Sitemap: https://toolful.github.io/sitemap.xml
+Robots: https://toolful.github.io/robots.txt
