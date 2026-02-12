@@ -6,30 +6,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Toolful AI">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f172a">
 
 <title>Toolful AI – Free AI Tools for Students & Productivity</title>
 
 <meta name="description"
-content="Toolful AI provides free AI productivity tools including CV Generator, Word Counter, QR Code Maker, Image Converter and AI Detector. Fast, secure and easy to use.">
+content="Toolful AI provides free AI productivity tools including CV Generator, Word Counter, QR Code Maker and Image Converter.">
 
-<link rel="canonical" href="https://toolful.github.io/">
 <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
+<!-- POPUP -->
+<div id="welcomePopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Welcome to Toolful AI 👋</h2>
+    <p>Enter your name to continue</p>
+    <input type="text" id="userNameInput" placeholder="Your name..." />
+    <button id="startBtn">Start Using Tools</button>
+  </div>
+</div>
+
 <!-- HEADER -->
 <header class="header">
   <div class="container nav-container">
 
-    <!-- LOGO -->
     <div class="logo">
       <div class="logo-icon">T</div>
       <div class="logo-text">TOOLFUL<span>.</span></div>
     </div>
 
-    <!-- NAVIGATION -->
     <nav class="nav">
       <a href="#">Tools Names</a>
       <a href="#">Tool Tour</a>
@@ -46,11 +52,10 @@ content="Toolful AI provides free AI productivity tools including CV Generator, 
 
 <!-- HERO -->
 <section class="hero container">
-  <h1>TOOLFUL.</h1>
-  <h2>Free AI Tools for Students & Productivity</h2>
+  <h1>Free AI Tools for Students & Productivity</h1>
   <p>
-    Toolful AI provides simple and fast tools to help you study, write,
-    automate tasks, and improve daily productivity — without complexity.
+    Toolful AI provides simple and fast tools to help you study,
+    write, automate tasks, and improve daily productivity — without complexity.
   </p>
 </section>
 
@@ -63,48 +68,65 @@ content="Toolful AI provides free AI productivity tools including CV Generator, 
     <span class="status">Live</span>
     <h3>CV Generator</h3>
     <p>Create an ATS-friendly professional resume in seconds.</p>
-    <a href="cv.html" class="btn">Launch Tool</a>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
   <article class="card">
     <span class="status">Live</span>
     <h3>Wordify</h3>
-    <p>Free Word Counter Tool. Instant word & character counter with reading time.</p>
-    <a href="wordify.html" class="btn">Launch Tool</a>
+    <p>Free Word Counter Tool with reading time.</p>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
   <article class="card">
     <span class="status">Live</span>
     <h3>YouTube Banner Maker</h3>
     <p>Resize images to perfect YouTube channel art dimensions.</p>
-    <a href="youtube.html" class="btn">Launch Tool</a>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
   <article class="card">
     <span class="status">Live</span>
     <h3>Image Converter</h3>
-    <p>Convert images to PDF, JPG, PNG, text, or editable formats instantly.</p>
-    <a href="img.html" class="btn">Launch Tool</a>
+    <p>Convert images instantly to PDF, JPG or PNG.</p>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
   <article class="card">
     <span class="status">Live</span>
     <h3>Free QR Code Generator</h3>
-    <p>Generate clean QR codes for business, events, or personal use.</p>
-    <a href="qrcode.html" class="btn">Launch Tool</a>
+    <p>Generate clean QR codes for business or personal use.</p>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
   <article class="card">
     <span class="status">Live</span>
     <h3>You – AI Detector</h3>
-    <p>Detect AI-written content and humanize your writing.</p>
-    <a href="you.html" class="btn">Launch Tool</a>
+    <p>Detect AI-written content and humanize writing.</p>
+    <a href="#" class="btn">Launch Tool</a>
   </article>
 
 </section>
 
+<!-- FORM SECTION -->
+<section class="form-section">
+  <h2>Request a Tool</h2>
+  <p>Tell us what tool you need and we’ll build it.</p>
+
+  <!-- Replace with your Formspree link -->
+  <form action="https://formspree.io/f/xojnqwwp" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Describe your tool..." required></textarea>
+
+    <button type="submit">Send Request</button>
+
+  </form>
+</section>
+
 <!-- FAQ -->
-<section class="faq">
+<section class="faq container">
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
@@ -116,10 +138,7 @@ content="Toolful AI provides free AI productivity tools including CV Generator, 
     <h4>Is Toolful AI free?</h4>
     <p>Yes, all tools are completely free for students and businesses.</p>
   </div>
-
 </section>
-
-</main>
 
 <footer class="footer">
   <p>© 2026 Toolful AI | Free AI Tools for Everyone</p>
