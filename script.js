@@ -1,3 +1,59 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+    const popup = document.getElementById("welcomePopup");
+    const startBtn = document.getElementById("startBtn");
+    const nameInput = document.getElementById("userNameInput");
+
+    // Show popup only once
+    const savedName = localStorage.getItem("toolfulUserName");
+
+    if (savedName) {
+        popup.style.display = "none";
+        return;
+    }
+
+    startBtn.addEventListener("click", () => {
+        const userName = nameInput.value.trim();
+
+        if (userName === "") {
+            alert("Please enter your name.");
+            return;
+        }
+
+        // Save name locally
+        localStorage.setItem("toolfulUserName", userName);
+
+        // Send name to Formspree automatically
+        fetch("https://formspree.io/f/xojnqwwp", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: userName,
+                message: "New visitor joined Toolful AI popup."
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log("Name sent successfully to Formspree!");
+            } else {
+                console.log("Formspree submission failed.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+
+        // Hide popup
+        popup.style.display = "none";
+
+        alert("Welcome " + userName + "! Enjoy free tools 🚀");
+    });
+
+});
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
