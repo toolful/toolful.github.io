@@ -1,0 +1,139 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HERO */
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.subtitle {
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+/* CARD */
+.converter-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* INPUTS */
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+#outputValue {
+  background: #f1f5f9;
+}
+
+/* GRID */
+.converter-grid {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .converter-grid {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* SEO SECTION */
+.seo-section {
+  margin-top: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.feature-item {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* FAQ */
+.faq {
+  margin-top: 50px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-item h3 {
+  color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
