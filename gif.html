@@ -1,131 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Title -->
-  <title>Quick Unit Converter | Free Online Unit Conversion Tool</title>
+<title>Quick Unit Converter – Free Online Unit Conversion Calculator</title>
 
-  <!-- SEO Description -->
-  <meta name="description"
-    content="Quick Unit Converter is a free online unit conversion calculator for everything. Convert length, weight, temperature and more instantly on any device." />
+<meta name="description" content="Free online unit converter for length, weight, temperature, speed, area, volume, fuel economy, currency and more. Fast, accurate, responsive, and works on all devices worldwide." />
 
-  <!-- SEO Keywords -->
-  <meta name="keywords" content="
-    unit converter,
-    unit converter for everything,
-    unit conversion calculator,
-    free online unit converter,
-    unit converter google alternative,
-    weight unit converter,
-    area unit converter,
-    electricity unit converter,
-    money unit converter,
-    Quick Unit Converter
-  " />
+<meta name="keywords" content="unit converter, free unit converter, online conversion calculator, metric to imperial converter, speed converter, cooking converter, currency converter, fuel economy converter" />
 
-  <!-- FontAwesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<meta name="author" content="Toolful Converter" />
+<meta name="robots" content="index, follow" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="gif.css" />
+<!-- Open Graph -->
+<meta property="og:title" content="Quick Unit Converter – Free Online Conversion Tool" />
+<meta property="og:description" content="Convert length, weight, temperature, speed, volume, area and more instantly." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://toolful.github.io/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="stylesheet" href="gif.css" />
+
+<!-- FAQ Schema for AEO -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [{
+   "@type": "Question",
+   "name": "What is unit conversion?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Unit conversion is the process of converting measurements like meters to feet or kilograms to pounds."
+   }
+ },
+ {
+   "@type": "Question",
+   "name": "Is Quick Unit Converter free?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Quick Unit Converter is 100% free and works instantly on all devices."
+   }
+ }]
+}
+</script>
 </head>
 
 <body>
+<div class="container">
 
-  <div class="container">
+<header>
+<h1>Quick Unit Converter</h1>
+<p class="subtitle">Fast • Accurate • Free • Works on All Devices</p>
+</header>
 
-    <!-- HERO -->
-    <header>
-      <h1>Quick Unit Converter</h1>
-      <p class="subtitle">Fast • Accurate • Free • Works on All Devices</p>
-    </header>
+<main class="converter-card">
 
-    <!-- CONVERTER TOOL -->
-    <main class="converter-card">
+<div class="input-group">
+<label>Select Category</label>
+<select id="category">
+<option value="length">Length</option>
+<option value="weight">Weight</option>
+<option value="temp">Temperature</option>
+<option value="area">Area</option>
+<option value="speed">Speed</option>
+<option value="volume">Volume</option>
+</select>
+</div>
 
-      <!-- Category -->
-      <div class="input-group">
-        <label>Select Category</label>
-        <select id="category">
-          <option value="length">Length (Metric/Imperial)</option>
-          <option value="weight">Weight (Mass)</option>
-          <option value="temp">Temperature</option>
-        </select>
-      </div>
+<div class="converter-grid">
+<div class="input-group">
+<label>From</label>
+<input type="number" id="inputValue" placeholder="Enter value..." />
+<select id="unitFrom"></select>
+</div>
 
-      <!-- Input + Output -->
-      <div class="converter-grid">
+<div class="input-group">
+<label>To</label>
+<input type="number" id="outputValue" readonly />
+<select id="unitTo"></select>
+</div>
+</div>
 
-        <!-- From -->
-        <div class="input-group">
-          <label>From</label>
-          <input type="number" id="inputValue" placeholder="Enter value..." />
-          <select id="unitFrom"></select>
-        </div>
+</main>
 
-        <!-- To -->
-        <div class="input-group">
-          <label>To</label>
-          <input type="number" id="outputValue" readonly />
-          <select id="unitTo"></select>
-        </div>
+<!-- POPULAR PAGES -->
+<section class="seo-section">
+<h2>Most Popular Conversion Pages</h2>
+<p>
+Fractions • Length • Temperature • Speed • Volume • Weight • Cooking • Area • Fuel Economy • Currency
+</p>
+</section>
 
-      </div>
-    </main>
+<!-- ALL CATEGORIES -->
+<section class="seo-section">
+<h2>All Conversion Pages and Categories</h2>
+<ul>
+<li><strong>Acceleration</strong> – g-unit, meter/s²</li>
+<li><strong>Area</strong> – Square meter, Acre, Square mile</li>
+<li><strong>Energy</strong> – Joule, BTU, Calorie</li>
+<li><strong>Force</strong> – Newton, Pound-force</li>
+<li><strong>Pressure</strong> – Pascal, Torr</li>
+<li><strong>Speed</strong> – km/h, mph, knots</li>
+<li><strong>Temperature</strong> – Celsius, Fahrenheit, Kelvin</li>
+<li><strong>Volume</strong> – Liter, Gallon, Pint</li>
+<li><strong>Weight/Mass</strong> – Kilogram, Pound, Ounce</li>
+<li><strong>Currency</strong> – USD, EUR, GBP (Live rates coming soon)</li>
+</ul>
+</section>
 
-    <!-- SEO CONTENT -->
-    <section class="seo-section">
-      <h2>Free Unit Converter for Everything</h2>
-      <p>
-        Quick Unit Converter is a free online unit conversion calculator designed
-        for students, engineers, and travelers worldwide.
-        Convert length, weight, temperature, area, electricity, and more instantly.
-      </p>
+<footer>
+<p>Quick Unit Converter – Free Unit Converter Calculator Online.</p>
+<p>&copy; 2026 toolful.github.io</p>
+</footer>
 
-      <div class="features-grid">
-        <div class="feature-item"><i class="fas fa-bolt"></i><br>Instant</div>
-        <div class="feature-item"><i class="fas fa-mobile-alt"></i><br>Responsive</div>
-        <div class="feature-item"><i class="fas fa-lock-open"></i><br>No Signup</div>
-        <div class="feature-item"><i class="fas fa-globe"></i><br>Global Units</div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq">
-      <h2>Unit Conversion FAQs</h2>
-
-      <div class="faq-item">
-        <h3>What is unit conversion?</h3>
-        <p>
-          Unit conversion means changing measurements like meters to feet or kilograms to pounds.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Is Quick Unit Converter free?</h3>
-        <p>Yes, it is 100% free and works instantly on all devices.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Does it work like Google Unit Converter?</h3>
-        <p>
-          Yes, it works as a Google unit converter alternative with more categories.
-        </p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>Quick Unit Converter - Free Unit Converter Calculator Online.</p>
-      <p>&copy; 2026 toolful.github.io</p>
-    </footer>
-
-  </div>
-
-  <!-- External JS -->
-  <script src="gif.js"></script>
+</div>
+<script src="gif.js"></script>
 </body>
 </html>
