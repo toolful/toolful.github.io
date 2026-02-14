@@ -48,14 +48,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function playNotificationSound() {
-    const audio = new Audio("https://notificationsounds.com/storage/sounds/file-sounds-1152-pristine.mp3");
-    audio.volume = 0.4; // soft sound
-    audio.play().catch(() => {});
+    try {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + 0.15);
+    } catch (e) {}
   }
 
   function createNotification() {
 
-    const name = savedName || getRandom(randomNames);
+    const currentUser = localStorage.getItem("toolfulUserName");
+    const name = currentUser || getRandom(randomNames);
     const country = getRandom(countries);
 
     const notification = document.createElement("div");
@@ -67,30 +80,50 @@ document.addEventListener("DOMContentLoaded", function () {
         <strong>${name}</strong> from <strong>${country}</strong><br>
         is using this tool right now
       </div>
+      <span class="close-btn">&times;</span>
     `;
 
     document.body.appendChild(notification);
 
-    // Play sound
     playNotificationSound();
 
     setTimeout(() => {
       notification.classList.add("show");
     }, 100);
 
-    // Hide after 6 seconds
-    setTimeout(() => {
-      notification.classList.remove("show");
-      setTimeout(() => {
-        notification.remove();
-      }, 500);
+    // Auto hide after 6 sec
+    const autoRemove = setTimeout(() => {
+      removeNotification(notification);
     }, 6000);
+
+    // Manual close
+    notification.querySelector(".close-btn").addEventListener("click", () => {
+      clearTimeout(autoRemove);
+      removeNotification(notification);
+    });
   }
 
-  // 🔔 FIRST notification after 10 seconds
-  setTimeout(createNotification, 10000);
+  function removeNotification(notification) {
+    notification.classList.remove("show");
+    setTimeout(() => {
+      notification.remove();
+    }, 400);
+  }
 
-  // 🔁 Repeat every 2 minutes
-  setInterval(createNotification, 120000);
+  // First after 10 sec
+  setTimeout(() => {
+    createNotification();
+    startRandomInterval();
+  }, 10000);
+
+  // Random 1–1.5 min
+  function startRandomInterval() {
+    const randomDelay = Math.floor(Math.random() * 30000) + 60000;
+
+    setTimeout(() => {
+      createNotification();
+      startRandomInterval();
+    }, randomDelay);
+  }
 
 });
