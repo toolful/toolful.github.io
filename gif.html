@@ -1,226 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video to GIF 4K | Toolful High-Quality Converter</title>
-    
-    <meta name="description" content="Convert 4K Video to GIF with 60FPS support. Professional quality, 100% private browser-based compression.">
-    <meta property="og:title" content="Toolful GIF Master">
-    
-    <script>
-        if ('serviceWorker' in navigator) {
-            const swCode = `
-                self.addEventListener('install', () => self.skipWaiting());
-                self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
-                self.addEventListener('fetch', (ev) => {
-                    if (ev.request.mode === 'navigate') {
-                        ev.respondWith(fetch(ev.request).then(res => {
-                            const newHeaders = new Headers(res.headers);
-                            newHeaders.set('Cross-Origin-Embedder-Policy', 'require-corp');
-                            newHeaders.set('Cross-Origin-Opener-Policy', 'same-origin');
-                            return new Response(res.body, { status: res.status, statusText: res.statusText, headers: newHeaders });
-                        }));
-                    }
-                });`;
-            const blob = new Blob([swCode], { type: 'text/javascript' });
-            navigator.serviceWorker.register(URL.createObjectURL(blob)).then(reg => {
-                // If the page is not isolated yet, reload to apply headers
-                if (!window.crossOriginIsolated && location.hostname !== 'localhost') {
-                    setTimeout(() => location.reload(), 500);
-                }
-            });
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        :root {
-            --primary: #6366f1;
-            --bg: #0f172a;
-            --glass: rgba(30, 41, 59, 0.8);
-        }
+  <!-- SEO Title -->
+  <title>Quick Unit Converter | Free Online Unit Conversion Tool</title>
 
-        body {
-            background: var(--bg);
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            justify-content: center;
-            background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
-        }
+  <!-- SEO Description -->
+  <meta name="description"
+    content="Quick Unit Converter is a free online unit conversion calculator for everything. Convert length, weight, temperature and more instantly on any device." />
 
-        .container {
-            width: 90%;
-            max-width: 550px;
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 28px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-        }
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="
+    unit converter,
+    unit converter for everything,
+    unit conversion calculator,
+    free online unit converter,
+    unit converter google alternative,
+    weight unit converter,
+    area unit converter,
+    electricity unit converter,
+    money unit converter,
+    Quick Unit Converter
+  " />
 
-        .title { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(90deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  <!-- FontAwesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-        .drop-zone {
-            border: 2px dashed #475569;
-            border-radius: 20px;
-            padding: 3rem 1rem;
-            margin: 1.5rem 0;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .drop-zone:hover { border-color: var(--primary); background: rgba(99, 102, 241, 0.1); }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 1.1rem;
-            border-radius: 14px;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(99,102,241,0.3); }
-
-        #progress-wrap { margin-top: 1.5rem; display: none; }
-        .bar-bg { background: #334155; height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 10px; }
-        #bar-fill { width: 0%; height: 100%; background: var(--primary); transition: width 0.3s; }
-
-        select { background: #1e293b; color: white; border: 1px solid #475569; padding: 0.8rem; border-radius: 10px; width: 100%; margin-bottom: 1rem; }
-
-        .hidden { display: none; }
-        img { max-width: 100%; border-radius: 15px; margin-top: 1.5rem; border: 1px solid rgba(255,255,255,0.1); }
-    </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="title">GIF MASTER</div>
-        <p style="color: #94a3b8;">High-Quality Video to GIF Converter</p>
+  <div class="container">
 
-        <div id="ui-upload" class="drop-zone">
-            <input type="file" id="video-file" class="hidden" accept="video/*">
-            <div id="file-status">📄 Drop video or Click to Browse</div>
+    <!-- HERO -->
+    <header>
+      <h1>Quick Unit Converter</h1>
+      <p class="subtitle">Fast • Accurate • Free • Works on All Devices</p>
+    </header>
+
+    <!-- CONVERTER TOOL -->
+    <main class="converter-card">
+
+      <!-- Category -->
+      <div class="input-group">
+        <label>Select Category</label>
+        <select id="category">
+          <option value="length">Length (Metric/Imperial)</option>
+          <option value="weight">Weight (Mass)</option>
+          <option value="temp">Temperature</option>
+        </select>
+      </div>
+
+      <!-- Input + Output -->
+      <div class="converter-grid">
+
+        <!-- From -->
+        <div class="input-group">
+          <label>From</label>
+          <input type="number" id="inputValue" placeholder="Enter value..." />
+          <select id="unitFrom"></select>
         </div>
 
-        <div id="ui-options" class="hidden">
-            <div style="text-align: left; margin-bottom: 1rem;">
-                <label>Target Resolution:</label>
-                <select id="opt-scale">
-                    <option value="480">480p (Standard)</option>
-                    <option value="720" selected>720p (High Quality)</option>
-                    <option value="1080">1080p (Ultra High)</option>
-                </select>
-
-                <label>Frame Rate (FPS):</label>
-                <select id="opt-fps">
-                    <option value="15">15 FPS (Small Size)</option>
-                    <option value="30" selected>30 FPS (Smooth)</option>
-                    <option value="60">60 FPS (Pro)</option>
-                </select>
-            </div>
-            <button id="convert-btn" class="btn">Convert Now</button>
+        <!-- To -->
+        <div class="input-group">
+          <label>To</label>
+          <input type="number" id="outputValue" readonly />
+          <select id="unitTo"></select>
         </div>
 
-        <div id="progress-wrap">
-            <div class="bar-bg"><div id="bar-fill"></div></div>
-            <div id="status-text" style="font-size: 0.9rem; color: #94a3b8;">Preparing Engine...</div>
-        </div>
+      </div>
+    </main>
 
-        <div id="ui-result" class="hidden">
-            <img id="gif-result" src="" alt="Output">
-            <a id="download-link" class="btn" style="display: block; text-decoration: none; margin-top: 1rem;">Download GIF</a>
-            <p onclick="location.reload()" style="cursor: pointer; margin-top: 1rem; font-size: 0.8rem; color: #6366f1;">Convert another video</p>
-        </div>
-    </div>
+    <!-- SEO CONTENT -->
+    <section class="seo-section">
+      <h2>Free Unit Converter for Everything</h2>
+      <p>
+        Quick Unit Converter is a free online unit conversion calculator designed
+        for students, engineers, and travelers worldwide.
+        Convert length, weight, temperature, area, electricity, and more instantly.
+      </p>
 
-    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+      <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-bolt"></i><br>Instant</div>
+        <div class="feature-item"><i class="fas fa-mobile-alt"></i><br>Responsive</div>
+        <div class="feature-item"><i class="fas fa-lock-open"></i><br>No Signup</div>
+        <div class="feature-item"><i class="fas fa-globe"></i><br>Global Units</div>
+      </div>
+    </section>
 
-    <script>
-        const { createFFmpeg, fetchFile } = FFmpeg;
-        const ffmpeg = createFFmpeg({ 
-            log: true,
-            corePath: 'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'
-        });
+    <!-- FAQ SECTION -->
+    <section class="faq">
+      <h2>Unit Conversion FAQs</h2>
 
-        const videoInput = document.getElementById('video-file');
-        const uploadZone = document.getElementById('ui-upload');
-        const convertBtn = document.getElementById('convert-btn');
-        const status = document.getElementById('status-text');
-        const fill = document.getElementById('bar-fill');
+      <div class="faq-item">
+        <h3>What is unit conversion?</h3>
+        <p>
+          Unit conversion means changing measurements like meters to feet or kilograms to pounds.
+        </p>
+      </div>
 
-        uploadZone.onclick = () => videoInput.click();
+      <div class="faq-item">
+        <h3>Is Quick Unit Converter free?</h3>
+        <p>Yes, it is 100% free and works instantly on all devices.</p>
+      </div>
 
-        videoInput.onchange = (e) => {
-            if (e.target.files[0]) {
-                document.getElementById('file-status').innerText = "Selected: " + e.target.files[0].name;
-                document.getElementById('ui-options').classList.remove('hidden');
-            }
-        };
+      <div class="faq-item">
+        <h3>Does it work like Google Unit Converter?</h3>
+        <p>
+          Yes, it works as a Google unit converter alternative with more categories.
+        </p>
+      </div>
+    </section>
 
-        convertBtn.onclick = async () => {
-            const file = videoInput.files[0];
-            document.getElementById('ui-options').classList.add('hidden');
-            document.getElementById('progress-wrap').style.display = 'block';
+    <!-- FOOTER -->
+    <footer>
+      <p>Quick Unit Converter - Free Unit Converter Calculator Online.</p>
+      <p>&copy; 2026 toolful.github.io</p>
+    </footer>
 
-            try {
-                // Check if Cross-Origin Isolation is working
-                if (!window.crossOriginIsolated) {
-                    status.innerText = "Error: Security headers not active. Please refresh the page.";
-                    return;
-                }
+  </div>
 
-                if (!ffmpeg.isLoaded()) {
-                    status.innerText = "Loading conversion engine...";
-                    await ffmpeg.load();
-                }
-
-                status.innerText = "Writing video data...";
-                ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(file));
-
-                const scale = document.getElementById('opt-scale').value;
-                const fps = document.getElementById('opt-fps').value;
-
-                status.innerText = "Processing Frames (Two-pass encoding)...";
-                // Professional 2-pass encoding for crisp colors
-                await ffmpeg.run(
-                    '-i', 'input.mp4',
-                    '-vf', `fps=${fps},scale=${scale}:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse`,
-                    'out.gif'
-                );
-
-                const data = ffmpeg.FS('readFile', 'out.gif');
-                const url = URL.createObjectURL(new Blob([data.buffer], { type: 'image/gif' }));
-
-                document.getElementById('gif-result').src = url;
-                document.getElementById('download-link').href = url;
-                document.getElementById('download-link').download = "toolful-output.gif";
-                
-                document.getElementById('progress-wrap').style.display = 'none';
-                document.getElementById('ui-result').classList.remove('hidden');
-
-            } catch (err) {
-                status.innerText = "Error: " + err.message;
-                console.error(err);
-            }
-        };
-
-        // Track Progress
-        ffmpeg.setProgress(({ ratio }) => {
-            fill.style.width = (ratio * 100) + "%";
-            status.innerText = `Converting: ${Math.floor(ratio * 100)}%`;
-        });
-    </script>
+  <!-- External JS -->
+  <script src="script.js"></script>
 </body>
 </html>
