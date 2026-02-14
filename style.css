@@ -204,3 +204,59 @@ body {
 @media(max-width:768px){
   .hero h1 { font-size:1.8rem; }
 }
+
+
+.live-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+  z-index: 2000;
+  max-width: 90%;
+}
+
+.live-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.live-text strong {
+  color: #2563eb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .live-notification {
+    left: 10px;
+    right: 10px;
+    bottom: 15px;
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
