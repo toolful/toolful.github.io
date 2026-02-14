@@ -1,26 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 
-<!-- Basic Meta -->
+<!-- ================= BASIC META ================= -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<meta name="theme-color" content="#111827">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="author" content="Toolful AI">
-
-<!-- SEO -->
-<title>Toolful AI – Free AI Tools for Students & Productivity</title>
-<meta name="description" content="Toolful AI offers free AI tools including CV Generator, Word Counter, QR Code Generator, Image Converter and AI Detector. Fast, secure and 100% free.">
 <link rel="canonical" href="https://toolful.github.io/">
 
-<!-- Open Graph -->
+<!-- ================= SEO ================= -->
+<title>Toolful AI – Free AI Tools for Students & Productivity</title>
+<meta name="description" content="Toolful AI provides free productivity tools including CV Generator, Word Counter, QR Code Generator, Image Converter, AI Content Detector and Unit Converter. Fast, secure, and 100% free.">
+
+<!-- ================= GEO ================= -->
+<meta name="geo.region" content="US">
+<meta name="geo.placename" content="Worldwide">
+<meta name="geo.position" content="37.0902;-95.7129">
+<meta name="ICBM" content="37.0902, -95.7129">
+
+<!-- ================= OPEN GRAPH ================= -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="Toolful AI – Free AI Productivity Tools">
 <meta property="og:description" content="Free AI tools to boost productivity, automate tasks and improve study efficiency.">
-<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolful.github.io/">
+<meta property="og:site_name" content="Toolful AI">
+
+<!-- ================= TWITTER ================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toolful AI – Free AI Tools">
+<meta name="twitter:description" content="Fast, secure and free AI tools for students and professionals.">
 
 <link rel="stylesheet" href="style.css">
 
-<!-- FAQ Schema for Ranking -->
+<!-- ================= STRUCTURED DATA ================= -->
+
+<!-- Organization -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Toolful AI",
+ "url": "https://toolful.github.io/",
+ "logo": "https://toolful.github.io/logo.png",
+ "sameAs": []
+}
+</script>
+
+<!-- WebSite -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Toolful AI",
+ "url": "https://toolful.github.io/",
+ "potentialAction": {
+   "@type": "SearchAction",
+   "target": "https://toolful.github.io/?q={search_term_string}",
+   "query-input": "required name=search_term_string"
+ }
+}
+</script>
+
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -30,34 +74,35 @@
    "name": "What makes Toolful AI different?",
    "acceptedAnswer": {
      "@type": "Answer",
-     "text": "Toolful AI focuses on simple and fast productivity tools instead of complex AI chats."
+     "text": "Toolful AI focuses on simple and fast productivity tools instead of complex AI chat systems."
    }
  },{
    "@type": "Question",
    "name": "Is Toolful AI free?",
    "acceptedAnswer": {
      "@type": "Answer",
-     "text": "Yes, all tools are completely free for students and businesses."
+     "text": "Yes, all tools are completely free for students and businesses worldwide."
    }
  }]
 }
 </script>
 
 </head>
+
 <body>
 
-<!-- Popup -->
-<div id="welcomePopup" class="popup-overlay">
+<!-- ================= WELCOME POPUP ================= -->
+<div id="welcomePopup" class="popup-overlay" role="dialog" aria-modal="true">
   <div class="popup-box">
     <h2>Welcome to Toolful AI 👋</h2>
-    <p>Enter your name to continue</p>
-    <input type="email" id="userNameInput" placeholder="Your Email">
+    <p>Enter your email to personalize your experience.</p>
+    <input type="email" id="userNameInput" placeholder="Your Email" aria-label="Email address">
     <button id="startBtn">Start</button>
   </div>
 </div>
 
-<!-- Header -->
-<header class="header">
+<!-- ================= HEADER ================= -->
+<header class="header" role="banner">
   <div class="container nav-container">
 
     <div class="logo">
@@ -65,27 +110,28 @@
       <div class="logo-text">TOOLFUL<span>.</span></div>
     </div>
 
-    <nav class="nav">
-      <a href="#grid">Tools</a>
+    <nav class="nav" role="navigation">
+      <a href="#tools">Tools</a>
       <a href="#faq">FAQ</a>
+      <a href="#request">Request Tool</a>
     </nav>
 
   </div>
 </header>
 
-<!-- Hero -->
+<!-- ================= HERO ================= -->
 <section class="hero container">
   <h1>Free AI Tools for Students & Productivity</h1>
   <p>
-    Toolful AI provides simple and fast tools to help you study, write,
-    automate tasks, and improve daily productivity — without complexity.
+    Toolful AI provides simple, fast and secure productivity tools to help you study,
+    write better, automate daily tasks and improve efficiency — without complexity.
   </p>
 </section>
 
-<main class="container">
+<main class="container" role="main">
 
-<!-- Tools -->
-<section class="grid">
+<!-- ================= TOOLS GRID ================= -->
+<section id="tools" class="grid">
 
 <article class="card">
 <span class="status">Live</span>
@@ -93,17 +139,18 @@
 <p>Create an ATS-friendly professional resume in seconds.</p>
 <a href="cv.html" class="btn">Launch Tool</a>
 </article>
+
 <article class="card">
 <span class="status">Live</span>
 <h3>Quick Unit Converter</h3>
-<p>Quick Unit Converter is a free online unit conversion calculator for everything. Convert length, weight, temperature and more instantly on any device.</p>
+<p>Free online conversion calculator for length, weight, temperature and more.</p>
 <a href="gif.html" class="btn">Launch Tool</a>
 </article>
 
 <article class="card">
 <span class="status">Live</span>
 <h3>Wordify</h3>
-<p>Instant word & character counter with reading time.</p>
+<p>Instant word & character counter with reading time estimation.</p>
 <a href="wordify.html" class="btn">Launch Tool</a>
 </article>
 
@@ -137,10 +184,10 @@
 
 </section>
 
-<!-- Form -->
-<section class="form-section">
-<h2>Request a Tool</h2>
-<p>Tell us what you want to automate and we’ll build it.</p>
+<!-- ================= REQUEST FORM ================= -->
+<section id="request" class="form-section">
+<h2>Request a Custom Tool</h2>
+<p>Tell us what you want to automate and we’ll build it for free.</p>
 
 <form action="https://formspree.io/f/xojnqwwp" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
@@ -150,26 +197,33 @@
 </form>
 </section>
 
-<!-- FAQ -->
-<section class="faq">
+<!-- ================= FAQ ================= -->
+<section id="faq" class="faq">
 <h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
 <h4>What makes Toolful AI different?</h4>
-<p>Toolful focuses on simple, repeatable tools instead of confusing AI chats.</p>
+<p>Toolful focuses on simple, repeatable tools instead of confusing AI chat systems.</p>
 </div>
- 
+
 <div class="faq-item">
 <h4>Is Toolful AI free?</h4>
-<p>Yes, all tools are completely free for students and businesses.</p>
+<p>Yes, all tools are completely free for students, creators and businesses.</p>
+</div>
+
+<div class="faq-item">
+<h4>Do I need to sign up?</h4>
+<p>No signup required. You can use all tools instantly without registration.</p>
 </div>
 
 </section>
 
 </main>
 
-<footer class="footer">
+<!-- ================= FOOTER ================= -->
+<footer class="footer" role="contentinfo">
 <p>© 2026 Toolful AI | Free AI Tools for Everyone</p>
+<p>Built for Students • Creators • Professionals</p>
 </footer>
 
 <script src="script.js" defer></script>
