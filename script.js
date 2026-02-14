@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const savedName = localStorage.getItem("toolfulUserName");
@@ -37,22 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const countries = [
-    "United States",
-    "United Kingdom",
-    "Canada",
-    "Germany",
-    "France",
-    "India",
-    "Australia",
-    "Pakistan",
-    "Brazil",
-    "UAE",
-    "Turkey",
-    "Italy"
+    "United States", "United Kingdom", "Canada",
+    "Germany", "France", "India", "Australia",
+    "Pakistan", "Brazil", "UAE", "Turkey", "Italy"
   ];
 
   function getRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function playNotificationSound() {
+    const audio = new Audio("https://notificationsounds.com/storage/sounds/file-sounds-1152-pristine.mp3");
+    audio.volume = 0.4; // soft sound
+    audio.play().catch(() => {});
   }
 
   function createNotification() {
@@ -73,10 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(notification);
 
+    // Play sound
+    playNotificationSound();
+
     setTimeout(() => {
       notification.classList.add("show");
     }, 100);
 
+    // Hide after 6 seconds
     setTimeout(() => {
       notification.classList.remove("show");
       setTimeout(() => {
@@ -85,11 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 6000);
   }
 
-  // First popup after 8 seconds
-  setTimeout(createNotification, 8000);
+  // 🔔 FIRST notification after 10 seconds
+  setTimeout(createNotification, 10000);
 
-  // Repeat every 2 minutes
+  // 🔁 Repeat every 2 minutes
   setInterval(createNotification, 120000);
 
 });
-
