@@ -1,4 +1,70 @@
-   /* CSS Variables & Reset */
+/* --- New Notification & Popup Styles --- */
+.live-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--card-light);
+    border: 1px solid var(--primary);
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    transform: translateX(-120%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.live-notification.show { transform: translateX(0); }
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.live-text { font-size: 0.85rem; color: var(--text-light); }
+.close-btn { cursor: pointer; margin-left: 10px; opacity: 0.5; font-size: 1.2rem; }
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+#welcomePopup {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: var(--card-light);
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+#userNameInput {
+    width: 100%;
+    padding: 12px;
+    margin: 1.5rem 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+/* CSS Variables & Reset */
         :root {
             --primary: #4f46e5;
             --primary-hover: #4338ca;
@@ -245,4 +311,5 @@
             .stat-item { width: 45%; }
             .text-display { font-size: 1.1rem; }
             .result-score { font-size: 3rem; }
+
         }
