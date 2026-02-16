@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Typing Speed Test - Check WPM & Accuracy in 1 Minute | Toolful</title>
+    <meta name="description" content="Test your typing speed with our free 1-minute WPM test. Instant results, accuracy calculation, and mistake highlighting. Improve your typing skills today.">
+    <meta name="keywords" content="typing speed test, wpm test, words per minute test, typing accuracy test, 1 minute typing test, typing practice, fast typing, toolful">
+    <meta name="author" content="Toolful">
+    <meta name="theme-color" content="#4f46e5">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolful.github.io/typing-speed-test">
+    <meta property="og:title" content="Free Typing Speed Test - Check WPM & Accuracy">
+    <meta property="og:description" content="Master touch typing with our advanced 1-minute speed test. Real-time WPM and accuracy tracking.">
+    <meta property="og:image" content="https://toolful.github.io/assets/typing-test-preview.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Toolful Typing Speed Test",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A professional-grade, browser-based typing speed test to measure WPM and accuracy.",
+      "featureList": "WPM Calculator, Accuracy Tracker, Dark Mode, Leaderboard UI"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good WPM score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average typing speed is around 40 WPM (Words Per Minute). Professional typists often reach 65-75 WPM, while advanced positions may require 80-100+ WPM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is WPM calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WPM is calculated by taking the total number of characters typed, dividing by 5 (standard word length), and then dividing by the time elapsed in minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I improve my typing speed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To improve speed: 1. Practice touch typing (don't look at keys). 2. Focus on accuracy before speed. 3. Maintain good posture. 4. Use typing tests daily."
+          }
+        }
+      ]
+    }
+    </script>
+
+  <link rel="stylesheet" href="typingmaster.css" />
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">Toolful.</div>
+        <button class="theme-toggle" id="themeBtn" aria-label="Toggle Dark Mode">Dark Mode</button>
+    </header>
+
+    <section class="hero-section">
+        <h1>Typing Speed Test</h1>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+            A professional <strong>1-minute typing test</strong> to calculate your Words Per Minute (WPM) and accuracy. Instant feedback with mistake highlighting.
+        </p>
+    </section>
+
+    <main class="tool-wrapper">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span>Time Left</span>
+                <strong id="timer">60s</strong>
+            </div>
+            <div class="stat-item">
+                <span>Mistakes</span>
+                <strong id="mistakes">0</strong>
+            </div>
+            <div class="stat-item">
+                <span>WPM</span>
+                <strong id="wpm">0</strong>
+            </div>
+            <div class="stat-item">
+                <span>Accuracy</span>
+                <strong id="accuracy">100%</strong>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar" style="width: 100%;"></div>
+        </div>
+
+        <div class="typing-area" id="typingArea">
+            <input type="text" class="input-field" id="inputField" autocomplete="off">
+            <div class="text-display" id="textDisplay">
+                </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="restartBtn">Try Again</button>
+        </div>
+
+        <div class="result-overlay" id="resultOverlay">
+            <div class="result-title">Time's Up!</div>
+            <div class="result-score"><span id="finalWpm">0</span> WPM</div>
+            <div class="result-details">
+                <div>Accuracy: <strong id="finalAccuracy">0%</strong></div>
+                <div>Mistakes: <strong id="finalMistakes">0</strong></div>
+            </div>
+            <div>
+                <button class="btn" onclick="resetGame()">Retest</button>
+                <button class="btn btn-secondary" onclick="shareResult()">Share Score</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="leaderboard">
+        <h3>🏆 Top Typists Today</h3>
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>User</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-1">1</td>
+                    <td>SpeedDemon_99</td>
+                    <td>112</td>
+                    <td>99%</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>KeyboardWarrior</td>
+                    <td>105</td>
+                    <td>98%</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>TypistPro</td>
+                    <td>98</td>
+                    <td>96%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <article class="seo-content">
+        <h2>How to Take the Typing Speed Test</h2>
+        <div class="geo-box">
+            <p>Follow these simple steps to measure your typing speed:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Start:</strong> Click on the text area to begin typing. The timer starts automatically.</li>
+                <li><strong>Type:</strong> Type the highlighted text exactly as shown. Blue indicates correct letters, Red indicates errors.</li>
+                <li><strong>Result:</strong> After 60 seconds, your WPM (Words Per Minute) and Accuracy percentage will be displayed.</li>
+                <li><strong>Improve:</strong> Use the "Try Again" button to practice and improve your score.</li>
+            </ul>
+        </div>
+
+        <h2>What is WPM?</h2>
+        <p><strong>WPM (Words Per Minute)</strong> is the standard metric for measuring typing speed. It is calculated by dividing the total number of characters typed by 5 (the standardized length of a word) and then dividing that number by the minutes spent typing. A higher WPM indicates a faster typing speed.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div>
+                <h3>Why should I take a typing test?</h3>
+                <p>Taking a typing test helps benchmark your current skills. Regular practice can improve muscle memory, reduce finger fatigue, and increase productivity for students and professionals.</p>
+            </div>
+            <div>
+                <h3>Is this typing test mobile-friendly?</h3>
+                <p>Yes, the Toolful Typing Speed Test is 100% responsive and optimized for mobile devices, tablets, and desktops.</p>
+            </div>
+            <div>
+                <h3>How is accuracy calculated?</h3>
+                <p>Accuracy is the ratio of correctly typed characters to total characters typed, expressed as a percentage. High speed with low accuracy will result in a lower effective score.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; background: var(--bg-dark); color: white; padding: 2rem; border-radius: var(--radius);">
+            <h3>Ready to master touch typing?</h3>
+            <p style="margin-bottom: 1rem; color: #cbd5e1;">Practice daily to see significant improvements in just 2 weeks.</p>
+            <button class="btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Start Test Now</button>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Toolful. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+            <a href="#" style="color: var(--primary);">Privacy Policy</a> | 
+            <a href="#" style="color: var(--primary);">Terms of Use</a> | 
+            <a href="#" style="color: var(--primary);">More Tools</a>
+        </p>
+    </footer>
+</div>
+  <script src="typingmaster.js"></script>
+</body>
+</html>
