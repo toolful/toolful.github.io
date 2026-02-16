@@ -191,6 +191,9 @@
 
 /* Keep your existing typing logic above this line */
 
+/* ... [Existing typing game functions: loadParagraph, initTyping, etc.] ... */
+
+// --- Your EXACT Added Functionality ---
 document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("welcomePopup");
     const startBtn = document.getElementById("startBtn");
